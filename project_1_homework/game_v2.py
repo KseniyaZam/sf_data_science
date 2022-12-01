@@ -15,20 +15,74 @@ def random_predict(number: int = 1) -> int:
         int: Число попыток
     """
     count = 0
+    n=str(number)
 
     while True:
         count += 1
-        if len(str(number))==1:
+        if len(n)==1:
             predict_number = np.random.randint(1, 10)  # предполагаемое число
             if int(number) == predict_number:
                 break
-        if len(str(number))==3:
+        if len(n)==3:
             predict_number=100
             break
-        if len(str(number))==2:
-            predict_number = np.random.randint(10, 100)
-            if int(number) == predict_number:
-                    break         # выход из цикла если угадали
+        if len(n)==2:
+            for i in n:
+                if int(i)==1:
+                    predict_number = np.random.randint(10, 20)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==2:
+                    predict_number = np.random.randint(20, 30)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==3:
+                    predict_number = np.random.randint(30, 40)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==4:
+                    predict_number = np.random.randint(40, 50)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==5:
+                    predict_number = np.random.randint(50, 60)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==6:
+                    predict_number = np.random.randint(60, 70)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==7:
+                    predict_number = np.random.randint(70, 80)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==8:
+                    predict_number = np.random.randint(80, 90)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                if int(i)==9:
+                    predict_number = np.random.randint(90, 100)   
+                    if number == predict_number:
+                        break
+                    else:
+                        continue
+                # выход из цикла если угадали
     return count
 
 
