@@ -26,30 +26,9 @@ def random_predict(number: int = 1) -> int:
             predict_number=100
             break
         if len(str(number))==2:
-            if str(number)[0]==1:
-                predict_number = np.random.randint(10, 20)
-                if int(number) == predict_number:
-                    break
-            if str(number)[0]==2:
-                predict_number = np.random.randint(20, 30)
-                if int(number) == predict_number:
-                    break
-            if str(number)[0]==3:
-                predict_number = np.random.randint(30, 40)
-                if int(number) == predict_number:
-                    break
-            if str(number)[0]==4:
-                predict_number = np.random.randint(40, 50)
-                if int(number) == predict_number:
-                    break 
-            if str(number)[0]==5:
-                predict_number = np.random.randint(50, 60)
-                if int(number) == predict_number:
-                    break
-            if str(number)[0]==6:
-                predict_number = np.random.randint(60, 70)       
-                if int(number) == predict_number:
-                    break  # выход из цикла если угадали
+            predict_number = np.random.randint(10, 100)
+            if int(number) == predict_number:
+                    break         # выход из цикла если угадали
     return count
 
 
